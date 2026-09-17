@@ -1,0 +1,5 @@
+interface:
+  display_name: "Fig. 1 Workflow"
+  short_description: "Create editable Fig. 1 flowcharts with data-driven panels"
+  brand_color: "#414B87"
+  default_prompt: "Use $fig1-workflow to create or refine an editable Fig. 1 flowchart with a new palette, reference-inspired layout, and data-driven scientific panels."
