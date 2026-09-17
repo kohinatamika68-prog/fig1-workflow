@@ -28,8 +28,38 @@ Read the supporting references only as needed:
   transformations, reproducibility checks, and paper-integration gates.
 - [asset_manifest.md](references/asset_manifest.md) maps the bundled screenshot,
   reference Visio files, editable exemplar, and chart exports to their intended use.
+- [modelviz_catalog.md](references/modelviz_catalog.md) defines the complete ModelViz
+  candidate universe, category-level data requirements, selection rules, and the
+  current FAR mapping.
+- [modelviz_template_index_snapshot.csv](references/modelviz_template_index_snapshot.csv)
+  is the auditable 89-template index snapshot used for candidate recall.
 - [page_content_descriptions.md](references/page_content_descriptions.md) supplies
   concise descriptions for the overview page and each expanded scientific figure.
+
+## ModelViz candidate space
+
+Use the upstream [ModelViz catalog](https://github.com/hrdZhu/modelviz-skill) as a
+recall space, not as a fixed three-chart recipe. The catalog snapshot covers all
+12 upstream families: clustering/reduction, comparison/ranking, composite evaluation,
+distribution/uncertainty, multi-panel reports, network/flow, optimization/decision,
+prediction evaluation, relationship/correlation, sensitivity/robustness,
+spatial/geographic analysis, and trend/time-series analysis. The current FAR heatmap,
+radar, and raincloud are only the panels that fit its result tables.
+
+For every new paper, make a short candidate ledger before drawing:
+
+1. consider all 12 families and recall compatible template IDs from the snapshot;
+2. match each candidate to the paper's question and exact input schema;
+3. select a small non-redundant subset that remains legible at Fig. 1 width and can be
+   exported as editable/vector artwork; and
+4. record selected IDs, the question each panel answers, and rejected families or
+   templates with a concrete reason.
+
+The ModelViz examples and demo data are style and layout references only. Do not
+execute their demo data, copy their reported values, or invent missing uncertainty,
+significance, spatial coordinates, network edges, prediction labels, or time ordering.
+Use the target paper's result files for every plotted value and keep the provenance
+record with the figure package.
 
 ## Workflow
 
@@ -40,11 +70,13 @@ Read the supporting references only as needed:
    method logic in the center, and maintained outputs plus evaluation on the right.
    Use stacked section bands and a compact bottom routing/summary band when they clarify
    the reading order.
-3. Reserve the main diagram for the method mechanism. Add two or three descriptive,
-   data-driven scientific panels that answer distinct questions. The exemplar uses a
-   clustered runtime-correlation heatmap, a six-regime baseline/FAR radar, and
-   per-dataset speedup rainclouds. Replace these with equivalent panels when the local
-   data supports a better scientific question, but preserve the same evidence standard.
+3. Run the ModelViz candidate-ledger step before choosing scientific panels. Reserve the
+   main diagram for the method mechanism, then add two or three non-redundant,
+   data-driven panels that answer distinct questions. The exemplar uses a clustered
+   runtime-correlation heatmap, a six-regime baseline/FAR radar, and per-dataset
+   speedup rainclouds. Replace these with candidates from any ModelViz family when the
+   local data and paper question support them; never treat the exemplar's three charts
+   as a whitelist.
 4. Use a fully new palette relative to the supplied references. The exemplar palette is
    wine, indigo, copper-gold, warm neutral, and a dark ink. Keep contrast sufficient for
    grayscale printing and use color consistently for method roles and datasets.

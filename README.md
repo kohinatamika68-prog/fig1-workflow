@@ -14,6 +14,8 @@ generation/verification templates.
 | `references/fig1_blueprint.md` | Three-column layout, palette, typography, panel roles, and native-shape guidance. | When deciding geometry and visual hierarchy. |
 | `references/data_and_qa_contract.md` | Data transforms, provenance rules, PDF/VSDX checks, and package validation. | Before plotting or delivering. |
 | `references/asset_manifest.md` | Description of every bundled image, VSDX, vector export, and source template. | When selecting a reference or exemplar asset. |
+| `references/modelviz_catalog.md` | Complete ModelViz category map, data requirements, panel decision rules, and FAR mapping. | Before selecting any scientific panel. |
+| `references/modelviz_template_index_snapshot.csv` | Full 89-template index snapshot from the pinned ModelViz commit. | When recalling candidate templates and recording exclusions. |
 | `assets/fig1_editable_exemplar.vsdx` | Editable FAR Fig. 1 source. | When starting from a complete native layout. |
 | `assets/fig1_overview_with_panels.*` | Overview render with the compact “cool” panels. | When checking the intended final composition. |
 | `assets/workload_regimes.*` | Expanded radar analysis. | For workload-regime comparisons in the paper body. |
@@ -39,6 +41,35 @@ The bundled paper places the visual story in this order:
 Each page or figure answers a different question. The overview explains how the method
 works; the expanded figures explain when the measured benefit appears and how stable it
 is across the workload grid.
+
+## Complete ModelViz candidate space
+
+The skill uses [hrdZhu/modelviz-skill](https://github.com/hrdZhu/modelviz-skill) as a
+candidate catalog. The included snapshot is pinned to commit
+`cd9eac0202163706bbcef269c0c5623c79bb8eb5` (checked 2026-09-17). It covers all 89
+templates in these 12 families:
+
+| Family | Templates | Typical evidence question |
+| --- | ---: | --- |
+| Clustering / reduction | 4 | Are samples or variables grouped, separated, or projected? |
+| Comparison / ranking | 16 | Which method, regime, metric, or composition is larger or better? |
+| Composite evaluation | 2 | How do several evaluation dimensions combine? |
+| Distribution / uncertainty | 6 | How variable, skewed, separated, or statistically different are observations? |
+| Multi-panel report | 4 | Which coordinated views are needed for one evidence story? |
+| Network / flow | 2 | What connects, overlaps, transfers, or flows between entities? |
+| Optimization / decision | 1 | Which parameter or configuration optimizes a stated objective? |
+| Prediction evaluation | 10 | How accurate, calibrated, or stable are predictions? |
+| Relationship / correlation | 21 | What association, effect, interaction, or regression relationship is supported? |
+| Sensitivity / robustness | 15 | Which inputs drive output and how do effects change across values? |
+| Spatial / geographic | 4 | Where does an effect or prediction occur? |
+| Trend / time series | 4 | How does a measure change over ordered time or lag? |
+
+The heatmap, radar, and raincloud in the bundled FAR example are only one data-driven
+subset: `09_REL`, `02_CMP`, and `04_DIS`, respectively. For a new paper, the workflow
+considers all 12 families first, then selects two or three non-redundant panels that
+match the paper's question, exact data schema, and Fig. 1 width. The selection record
+must list the families and template IDs considered, selected, and rejected with
+reasons. ModelViz demo data and preview values are never used as paper evidence.
 
 ## Use the skill
 
