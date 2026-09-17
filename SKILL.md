@@ -28,6 +28,8 @@ Read the supporting references only as needed:
   transformations, reproducibility checks, and paper-integration gates.
 - [asset_manifest.md](references/asset_manifest.md) maps the bundled screenshot,
   reference Visio files, editable exemplar, and chart exports to their intended use.
+- [page_content_descriptions.md](references/page_content_descriptions.md) supplies
+  concise descriptions for the overview page and each expanded scientific figure.
 
 ## Workflow
 
